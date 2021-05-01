@@ -27,7 +27,7 @@ export default {
     mounted: function() {
        var self = this;
     axios
-      .get('http://127.0.0.1:8081/products')
+      .get('http://127.0.0.1:5001/products')
       .then(res => {
           self.products = res.data;
           });

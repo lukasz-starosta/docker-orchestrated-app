@@ -9,7 +9,7 @@ exports.getAll = (req, res) => {
             res.json(allProducts);
         }
     );
-    //res.json(products);
+    res.json(products);
 };
 
 exports.getById = (req, res) => {

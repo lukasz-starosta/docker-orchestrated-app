@@ -2,12 +2,10 @@ services:
     products-database:
         build: ./products-database
         ports:
-            - 8081:3306
+            - 3306:3306
 
     products-service:
         build: ./products
-        volumes:
-            - ./products:/usr/src/app
         ports:
             - 5001:8081
         depends_on:
@@ -15,8 +13,6 @@ services:
 
     products-view:
         build: ./products-view
-        volumes:
-            - ./products-view:/usr/src/app
         ports:
             - 5000:8080
         depends_on:
